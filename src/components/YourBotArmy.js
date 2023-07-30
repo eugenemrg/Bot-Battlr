@@ -1,8 +1,13 @@
 import React from 'react'
+import EnlistedBot from './EnlistedBot'
 
-function YourBotArmy() {
+function YourBotArmy({botArmy}) {
     return (
-        <div>YourBotArmy</div>
+        <div className='army-collection'>
+            {botArmy.map( (bot) => {
+                return <EnlistedBot key={bot.id} bot={bot}/>
+            })}
+        </div>
     )
 }
 

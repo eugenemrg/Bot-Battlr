@@ -6,6 +6,7 @@ import BotCollection from './components/BotCollection';
 function App() {
 
   const [allBots, setAllBots] = useState([])
+  const [botArmy, setBotArmy] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/bots')
@@ -13,10 +14,14 @@ function App() {
     .then(data => setAllBots(data))
   }, [])
 
+  function addNewBotToBotArmy(selectedBot) {
+    if(!botArmy.includes(selectedBot)) setBotArmy([...botArmy, selectedBot])
+  }
+
   return (
     <div className="App">
-      <YourBotArmy />
-      <BotCollection allBots={allBots} />
+      <YourBotArmy botArmy={botArmy}/>
+      <BotCollection allBots={allBots} updateBotArmy={addNewBotToBotArmy} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Bot({ bot, updateBotArmy }) {
+function EnlistedBot({ bot }) {
 
     const { name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
@@ -32,12 +32,8 @@ function Bot({ bot, updateBotArmy }) {
         return icon
     }
 
-    function handleClick() {
-        updateBotArmy(bot)
-    }
-
     return (
-        <div className="card" onClick={handleClick}>
+        <div className="army-card">
             <img className="avatar" src={avatar_url} alt={name} />
             <div className="description">
                 <p className="identification">{name}{getBotClassIcon(bot_class)}</p>
@@ -52,4 +48,4 @@ function Bot({ bot, updateBotArmy }) {
     )
 }
 
-export default Bot
+export default EnlistedBot
