@@ -96,6 +96,27 @@ code {
   border: 1px solid lightgray;
   background-color: white;
   border-radius: 8px;
+  position: relative;
+}
+
+.card .delete, .card .fa-circle-xmark{
+  color: red;
+  display: block;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: -1;
+  font-size: 1.5em;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.card:hover .delete{
+  z-index: 1000;
+}
+
+.card .delete:hover{
+  color: rgba(255, 0, 0, 0.7);
 }
 
 .card .avatar{
