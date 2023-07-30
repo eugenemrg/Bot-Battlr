@@ -47,7 +47,7 @@ function Bot({ bot, updateBotArmy, onDelete }) {
 
     return (
         <div className="card" onClick={handleBotCardClick}>
-            <i class="delete fa-solid fa-circle-xmark" onClick={handleButtonClick}></i>
+            <i className="delete fa-solid fa-circle-xmark" onClick={handleButtonClick}></i>
             <img className="avatar" src={avatar_url} alt={name} />
             <div className="description">
                 <p className="identification">{name}{getBotClassIcon(bot_class)}</p>
