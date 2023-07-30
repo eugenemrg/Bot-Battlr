@@ -7,6 +7,7 @@ function App() {
 
   const [allBots, setAllBots] = useState([])
   const [botArmy, setBotArmy] = useState([])
+  const [enlistedClasses, setEnlistedClasses] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/bots')
@@ -14,8 +15,15 @@ function App() {
     .then(data => setAllBots(data))
   }, [])
 
+  // Update list of classes already in bot army
+  useEffect(() => {
+    setEnlistedClasses(botArmy.map( bot => bot.bot_class))
+  }, [botArmy])
+
   function addNewBotToBotArmy(selectedBot) {
-    if(!botArmy.includes(selectedBot)) setBotArmy([...botArmy, selectedBot])
+    if(!botArmy.includes(selectedBot) && !enlistedClasses.includes(selectedBot.bot_class)){
+      setBotArmy([...botArmy, selectedBot])
+    }
   }
 
   function removeBotFromBotArmy(id) {
