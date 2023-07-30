@@ -15,6 +15,7 @@ The bot **does not** disappear from the `BotCollection`.
 - Discharge a bot from their service forever, by clicking the red button marked
  "x", which would delete the bot both from the backend and from the
  `YourBotArmy` on the frontend.
+ - Choose if I want to enlist a bot into my army or just see their data. Clicking on the card should instead display a show view (`BotSpecs`) for that bot, which should replace `BotsCollection`. BotSpecs should have two buttons: one to go back to the list view and another to enlist that bot. (Changes default behavior of second action on this list)
 - Only enlist **one** bot from each `bot_class`. The classes are
  `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`
 
