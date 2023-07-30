@@ -1,0 +1,106 @@
+.specs-container{
+    display: flex;
+    justify-content: center;
+}
+
+.specs{
+    display: flex;
+    flex-direction: row;
+}
+
+.current-avatar{
+    position: relative;
+    border-radius: 50%;
+}
+
+.current-avatar img{
+    position: relative;
+    height: 320px;
+    width: 320px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 16px;
+    border: 1px solid #ddd;
+}    
+
+.current-name{
+    font-weight: bold;
+    font-size: 1.6em;
+    margin: 12px 0px;
+}
+
+.current-phrase-header{
+    font-weight: bold;
+}
+.current-phrase{
+    word-wrap: break-word;
+}
+.current-class{
+    font-weight: bold;
+    margin: 12px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.current-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 12px;
+    gap: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.current-stat {
+    display: flex;
+    align-items: center;
+}
+
+.current-class i,
+.health-icon,
+.damage-icon,
+.armor-icon {
+    color: black;
+    font-size: 1.5em;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+.current-class i{
+    margin: 0px 6px;
+}
+
+.health-icon,
+.damage-icon,
+.armor-icon {
+    margin-right: 4px;
+}
+
+.health-icon {
+    color: red;
+}
+
+.damage-icon {
+    color: orange;
+}
+
+.armor-icon {
+    color: dodgerblue;
+}
+
+.current-details button{
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    background-color: #dddddd;
+    border: 0px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+}
+.current-details button:hover{
+    background-color: lightgray;
+}
