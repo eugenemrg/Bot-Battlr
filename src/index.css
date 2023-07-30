@@ -18,17 +18,79 @@ code {
   /* border: 1px solid red; */
 }
 
-.bot-collection{
+.army-collection{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0px 16px;
-  /* background-color: #a9c315; */
+  background-color: #a9c315;
+}
+
+.army-card{
+  width: 240px;
+  margin: 16px;
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.army-card .avatar{
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: #efedef;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.army-card .description{
+  padding: 16px;
+  border-top: 1px solid lightgray;
+}
+
+.army-card .description .identification{
+  padding: 4px 0px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.army-card .description .identification i{
+  margin-left: 8px;
+  font-size: 1em;
+}
+
+.army-card .description .catchphrase{
+  word-wrap: break-word;
+}
+
+.army-card .stats{
+  max-width: 100%;
+  border-top: 1px solid lightgray;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.army-card .stats .stat{
+  padding: 4px;
+}
+
+.army-card .stats .stat i{
+  margin-right: 4px;
+}
+
+.bot-collection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 16px;
+  padding: 16px 0px;
 }
 
 .card{
-  width: 240px;
-  margin: 16px;
+  width: 23%;
   color: gray;
   border: 1px solid lightgray;
   background-color: white;
@@ -39,7 +101,7 @@ code {
   display: block;
   position: relative;
   width: 100%;
-  background-color: gainsboro;
+  background-color: #efedef;
   border-radius: 8px 8px 0px 0px;
 }
 
@@ -53,6 +115,11 @@ code {
   font-size: 1.5em;
   font-weight: bold;
   color: black;
+}
+
+.card .description .identification i{
+margin-left: 8px;
+font-size: 1em;
 }
 
 .card .description .catchphrase{
@@ -69,4 +136,8 @@ code {
 
 .card .stats .stat{
   padding: 4px;
+}
+
+.card .stats .stat i{
+margin-right: 4px;
 }
