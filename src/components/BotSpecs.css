@@ -1,6 +1,7 @@
 .specs-container{
     display: flex;
     justify-content: center;
+    margin: 16px 0px;
 }
 
 .specs{
@@ -26,7 +27,7 @@
 .current-name{
     font-weight: bold;
     font-size: 1.6em;
-    margin: 12px 0px;
+    margin: 16px 0px;
 }
 
 .current-phrase-header{
@@ -37,7 +38,7 @@
 }
 .current-class{
     font-weight: bold;
-    margin: 12px 0px;
+    margin: 16px 0px;
     display: flex;
     align-items: center;
 }
@@ -48,7 +49,7 @@
     justify-content: center;
     margin-bottom: 12px;
     gap: 16px;
-    padding: 12px;
+    padding: 16px;
     border: 1px solid #ddd;
     font-weight: bold;
     border-radius: 4px;
