@@ -1,8 +1,13 @@
 import React from 'react'
+import Bot from './Bot'
 
-function BotCollection() {
+function BotCollection({allBots}) {
     return (
-        <div>BotCollection</div>
+        <div className='bot-collection'>
+            {allBots.map( (bot) => {
+                return <Bot properties={bot} />
+            })}
+        </div>
     )
 }
 
