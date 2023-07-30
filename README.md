@@ -4,7 +4,7 @@
 
 A website demo of components, props, state, events, and data fetching in react.
 
-A galactic overlord has hired you to build a galactic web app that will allow them to browse through a list of robots, view a robot's details, and, enlist a bot into their army. Actions available:
+A galactic overlord has hired me to build a galactic web app that will allow them to browse through a list of robots, view a robot's details, and, enlist a bot into their army. Actions available:
 
 - See profiles of all bots rendered in `BotCollection`.
 - Add an individual bot to my army by clicking on it. The selected bot should
@@ -15,6 +15,8 @@ The bot **does not** disappear from the `BotCollection`.
 - Discharge a bot from their service forever, by clicking the red button marked
  "x", which would delete the bot both from the backend and from the
  `YourBotArmy` on the frontend.
+- Only enlist **one** bot from each `bot_class`. The classes are
+ `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`
 
 
 

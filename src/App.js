@@ -10,7 +10,7 @@ function App() {
   const [enlistedClasses, setEnlistedClasses] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots')
+    fetch('https://bots-api-h2ld.onrender.com/bots')
     .then(r => r.json())
     .then(data => setAllBots(data))
   }, [])

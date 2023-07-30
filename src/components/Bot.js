@@ -38,7 +38,7 @@ function Bot({ bot, updateBotArmy, onDelete }) {
 
     function handleButtonClick(e) {
         e.stopPropagation();
-        fetch(`http://localhost:3000/bots/${id}`, {
+        fetch(`https://bots-api-h2ld.onrender.com/bots/${id}`, {
             method: 'DELETE'
         })
         .then(r => r.json())
