@@ -67,6 +67,10 @@ Discharge a bot from their service forever, by clicking the red button marked "x
 
 ![](./screenshots/3.png)
 
+Clicking on the card should instead display a show view (BotSpecs) for that bot, which should replace BotsCollection. BotSpecs should have two buttons: one to go back to the list view and another to enlist that bot.
+
+![](./screenshots/5.png)
+
 # Author
 
 [Eugene Aduogo](https://github.com/eugenemrg)
