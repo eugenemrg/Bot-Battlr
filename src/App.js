@@ -32,6 +32,10 @@ function App() {
     setSelectedBot({...selectedBot})
   }
 
+  function hideBotDetails(){
+    setSelectedBot({})
+  }
+
   function removeBotFromBotArmy(id) {
     setBotArmy(botArmy.filter(bot => bot.id !== id))
   }
@@ -44,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <YourBotArmy botArmy={botArmy} removeBot={removeBotFromBotArmy}/>
-      {(Object.keys(selectedBot).length > 0) ? <BotSpecs bot={selectedBot} updateBotArmy={addNewBotToBotArmy} /> : '' }
+      {(Object.keys(selectedBot).length > 0) ? <BotSpecs bot={selectedBot} updateBotArmy={addNewBotToBotArmy} hideBotDetails={hideBotDetails} /> : '' }
       <BotCollection allBots={allBots} viewBot={showBotDetails} onDelete={handleDeleteBot} />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react'
 import './BotSpecs.css'
 
-function BotSpecs({bot, updateBotArmy}) {
+function BotSpecs({bot, updateBotArmy, hideBotDetails}) {
 
     const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
@@ -37,6 +37,10 @@ function BotSpecs({bot, updateBotArmy}) {
         updateBotArmy(bot)
     }
 
+    function handleBackClick(){
+        hideBotDetails()
+    }
+
     return (
         <div className="specs-container">
             <div className="specs">
@@ -53,7 +57,7 @@ function BotSpecs({bot, updateBotArmy}) {
                         <p className="current-stat"><i className="damage-icon fa-solid fa-bolt"></i>{damage}</p>
                         <p className="current-stat"><i className="armor-icon fa-solid fa-shield-halved"></i>{armor}</p>
                     </div>
-                    <button>Go Back</button>
+                    <button onClick={handleBackClick}>Go Back</button>
                     <button onClick={handleEnlistClick}>Enlist</button>
                 </div>
             </div>
