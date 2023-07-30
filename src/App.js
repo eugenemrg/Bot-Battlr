@@ -30,10 +30,15 @@ function App() {
     setBotArmy(botArmy.filter(bot => bot.id !== id))
   }
 
+  function handleDeleteBot(id) {
+    setAllBots(allBots.filter(bot => bot.id !== id))
+    setBotArmy(botArmy.filter(bot => bot.id !== id))
+  }
+
   return (
     <div className="App">
       <YourBotArmy botArmy={botArmy} removeBot={removeBotFromBotArmy}/>
-      <BotCollection allBots={allBots} updateBotArmy={addNewBotToBotArmy} />
+      <BotCollection allBots={allBots} updateBotArmy={addNewBotToBotArmy} onDelete={handleDeleteBot} />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Bot({ bot, updateBotArmy }) {
+function Bot({ bot, updateBotArmy, onDelete }) {
 
-    const { name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
+    const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
     function getBotClassIcon(botClass) {
         let icon
@@ -36,8 +36,13 @@ function Bot({ bot, updateBotArmy }) {
         updateBotArmy(bot)
     }
 
-    function handleButtonClick() {
-        
+    function handleButtonClick(e) {
+        e.stopPropagation();
+        fetch(`http://localhost:3000/bots/${id}`, {
+            method: 'DELETE'
+        })
+        .then(r => r.json())
+        .then(() => onDelete(id) )
     }
 
     return (
