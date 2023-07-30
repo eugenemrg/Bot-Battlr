@@ -1,11 +1,11 @@
 import React from 'react'
 import Bot from './Bot'
 
-function BotCollection({allBots, updateBotArmy, onDelete}) {
+function BotCollection({allBots, viewBot, onDelete}) {
     return (
         <div className='bot-collection'>
             {allBots.map( (bot) => {
-                return <Bot key={bot.id} bot={bot} updateBotArmy={updateBotArmy} onDelete={onDelete} />
+                return <Bot key={bot.id} bot={bot} viewBot={viewBot} onDelete={onDelete} />
             })}
         </div>
     )

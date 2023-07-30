@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Bot({ bot, updateBotArmy, onDelete }) {
+function Bot({ bot, viewBot, onDelete }) {
 
     const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
@@ -33,7 +33,7 @@ function Bot({ bot, updateBotArmy, onDelete }) {
     }
 
     function handleBotCardClick() {
-        updateBotArmy(bot)
+        viewBot(bot)
     }
 
     function handleButtonClick(e) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import './BotSpecs.css'
 
-function BotSpecs({bot}) {
+function BotSpecs({bot, updateBotArmy}) {
 
     const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
@@ -33,6 +33,10 @@ function BotSpecs({bot}) {
         return icon
     }
 
+    function handleEnlistClick() {
+        updateBotArmy(bot)
+    }
+
     return (
         <div className="specs-container">
             <div className="specs">
@@ -50,7 +54,7 @@ function BotSpecs({bot}) {
                         <p className="current-stat"><i className="armor-icon fa-solid fa-shield-halved"></i>{armor}</p>
                     </div>
                     <button>Go Back</button>
-                    <button>Enlist</button>
+                    <button onClick={handleEnlistClick}>Enlist</button>
                 </div>
             </div>
         </div>

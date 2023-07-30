@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import YourBotArmy from './components/YourBotArmy'
 import BotCollection from './components/BotCollection';
+import BotSpecs from './components/BotSpecs';
 
 function App() {
 
   const [allBots, setAllBots] = useState([])
   const [botArmy, setBotArmy] = useState([])
   const [enlistedClasses, setEnlistedClasses] = useState([])
+  const [selectedBot, setSelectedBot] = useState({})
 
   useEffect(() => {
     fetch('https://bots-api-h2ld.onrender.com/bots')
@@ -26,6 +28,10 @@ function App() {
     }
   }
 
+  function showBotDetails(selectedBot) {
+    setSelectedBot({...selectedBot})
+  }
+
   function removeBotFromBotArmy(id) {
     setBotArmy(botArmy.filter(bot => bot.id !== id))
   }
@@ -38,7 +44,8 @@ function App() {
   return (
     <div className="App">
       <YourBotArmy botArmy={botArmy} removeBot={removeBotFromBotArmy}/>
-      <BotCollection allBots={allBots} updateBotArmy={addNewBotToBotArmy} onDelete={handleDeleteBot} />
+      {(Object.keys(selectedBot).length > 0) ? <BotSpecs bot={selectedBot} updateBotArmy={addNewBotToBotArmy} /> : '' }
+      <BotCollection allBots={allBots} viewBot={showBotDetails} onDelete={handleDeleteBot} />
     </div>
   );
 }
