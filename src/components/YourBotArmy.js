@@ -1,11 +1,11 @@
 import React from 'react'
 import EnlistedBot from './EnlistedBot'
 
-function YourBotArmy({botArmy}) {
+function YourBotArmy({botArmy, removeBot}) {
     return (
         <div className='army-collection'>
             {botArmy.map( (bot) => {
-                return <EnlistedBot key={bot.id} bot={bot}/>
+                return <EnlistedBot key={bot.id} bot={bot} removeBot={removeBot}/>
             })}
         </div>
     )

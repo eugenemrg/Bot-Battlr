@@ -18,9 +18,13 @@ function App() {
     if(!botArmy.includes(selectedBot)) setBotArmy([...botArmy, selectedBot])
   }
 
+  function removeBotFromBotArmy(id) {
+    setBotArmy(botArmy.filter(bot => bot.id !== id))
+  }
+
   return (
     <div className="App">
-      <YourBotArmy botArmy={botArmy}/>
+      <YourBotArmy botArmy={botArmy} removeBot={removeBotFromBotArmy}/>
       <BotCollection allBots={allBots} updateBotArmy={addNewBotToBotArmy} />
     </div>
   );

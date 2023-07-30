@@ -1,8 +1,8 @@
 import React from 'react'
 
-function EnlistedBot({ bot }) {
+function EnlistedBot({ bot, removeBot }) {
 
-    const { name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
+    const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url } = bot
 
     function getBotClassIcon(botClass) {
         let icon
@@ -32,8 +32,12 @@ function EnlistedBot({ bot }) {
         return icon
     }
 
+    function handleClick() {
+        removeBot(id)
+    }
+
     return (
-        <div className="army-card">
+        <div className="army-card" onClick={handleClick}>
             <img className="avatar" src={avatar_url} alt={name} />
             <div className="description">
                 <p className="identification">{name}{getBotClassIcon(bot_class)}</p>
