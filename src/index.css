@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  padding: 0px;
+  margin: 0px;
+  /* border: 1px solid red; */
+}
+
+.bot-collection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 16px;
+  /* background-color: #a9c315; */
+}
+
+.card{
+  width: 240px;
+  margin: 16px;
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.card .avatar{
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: gainsboro;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.card .description{
+  padding: 16px;
+  border-top: 1px solid lightgray;
+}
+
+.card .description .identification{
+  padding: 4px 0px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.card .description .catchphrase{
+  word-wrap: break-word;
+}
+
+.card .stats{
+  max-width: 100%;
+  border-top: 1px solid lightgray;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card .stats .stat{
+  padding: 4px;
+}
